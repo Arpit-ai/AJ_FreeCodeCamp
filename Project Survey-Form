@@ -4,11 +4,12 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset='utf-8'>
-    <h1 id='title'>freeCodeCamp Survey Form</h1>
+    <h1 id='title' class='title'>freeCodeCamp Survey Form</h1>
     <p id='description'>Thank you for taking the time to help us improve the platform</p>
     </head>
     <body>
       <form id='survey-form'>
+        <div>
         <fieldset>
           <label id='name-label'>Name<input id='name' type='text'placeholder='Enter your name' required></label>
           <label id='email-label'>Email<input id='email' type='email' placeholder='Enter your Email' required></label>
@@ -26,9 +27,9 @@
             </fieldset>
             <fieldset>
               <legend>Would you recommend freeCodeCamp to a friend?</legend>
-              <label id='definitely'><input value='definitely' type='radio' name='recommendation' checked>Definitely</label>
-              <label id='maybe'><input value='maybe' type='radio' name='recommendation'>May Be</label>
-              <label id='notsure'><input value='notsure' type='radio' name='recommendation'>Not Sure</label>
+              <label id='definitely'><input value='definitely' type='radio' name='recommendation' class='buttons' checked>Definitely</label>
+              <label id='maybe'><input value='maybe' type='radio' name='recommendation' class='buttons'>May Be</label>
+              <label id='notsure'><input value='notsure' type='radio' name='recommendation' class='buttons'>Not Sure</label>
               </fieldset>
               <fieldset>
                 <label for='comments'>Any comments or suggestions?</label>
@@ -40,6 +41,7 @@
                   <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-End Projects</label>
                   </fieldset>
                 <button type="submit" id='submit'/>Submit</button>
+                </div>
         </form>
       </body>
 
@@ -48,3 +50,62 @@
 
 /* css */
 
+.title{
+  margin: 1em auto;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: #afbfcf;
+  font-family: Tahoma;
+  font-size: 26px;
+}
+body{
+  background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg)
+}
+
+div{
+  background-color: #1f6faf;
+}
+
+form{
+  width: 60%;
+  margin: auto;
+  max-width: 720px;
+  min-width: 128px;
+}
+
+fieldset{
+  border: none;
+}
+
+fieldset:last-of-type {
+  border-bottom: solid;
+}
+
+label{
+  display: block;
+  margin: auto;
+}
+
+input,
+textarea, select{
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  display: block;
+}
+
+button {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b4f;
+}
+
+.buttons, .input-checkbox{
+  display: inline;
+  width: unset;
+  margin: 0 0.5em 0 0;
+}
